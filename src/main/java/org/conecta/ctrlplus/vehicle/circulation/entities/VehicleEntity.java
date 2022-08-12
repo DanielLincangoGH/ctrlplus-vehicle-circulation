@@ -27,6 +27,9 @@ public class VehicleEntity {
   @Column(name = "id", nullable = false)
   private Long id;
 
+  @Column(name = "plate_id", nullable = false, unique = true)
+  private String plateId;
+
   @Column(name = "brand", nullable = false)
   private String brand;
 
