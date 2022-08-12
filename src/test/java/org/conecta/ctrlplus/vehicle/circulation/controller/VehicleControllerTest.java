@@ -1,6 +1,6 @@
 package org.conecta.ctrlplus.vehicle.circulation.controller;
 
-import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.SUCCESS_REGISTRATION_MSG;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.SUCCESS_REGISTRATION_MSG;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

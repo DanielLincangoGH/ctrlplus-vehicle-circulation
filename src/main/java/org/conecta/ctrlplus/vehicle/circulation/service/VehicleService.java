@@ -6,5 +6,8 @@ import org.conecta.ctrlplus.vehicle.circulation.dto.VehicleCreate;
 public interface VehicleService {
 
   VehicleCreate register(Vehicle vehicle);
+
+  Vehicle findByPlateId(String plateId);
+
 }
 

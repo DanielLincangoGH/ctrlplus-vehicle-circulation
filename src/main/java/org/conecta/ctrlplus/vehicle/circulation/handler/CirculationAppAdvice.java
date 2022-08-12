@@ -1,6 +1,6 @@
 package org.conecta.ctrlplus.vehicle.circulation.handler;
 
-import static org.conecta.ctrlplus.vehicle.circulation.utils.AppMessages.ERROR_GENERIC_MSG;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.AppMessages.ERROR_GENERIC_MSG;
 
 import lombok.extern.slf4j.Slf4j;
 import org.conecta.ctrlplus.vehicle.circulation.dto.Message;

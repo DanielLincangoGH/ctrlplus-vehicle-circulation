@@ -1,4 +1,4 @@
-package org.conecta.ctrlplus.vehicle.circulation.utils;
+package org.conecta.ctrlplus.vehicle.circulation.utils.messages;
 
 public final class AppMessages {
 

@@ -1,7 +1,8 @@
-package org.conecta.ctrlplus.vehicle.circulation.utils;
+package org.conecta.ctrlplus.vehicle.circulation.utils.messages;
 
 public final class VehicleMessages {
 
+  public static final String VEHICLE_IS_NOT_REGISTERED = "El vehículo no se encuentra registrado";
   public static final String ALREADY_REGISTERED_MSG_FORMAT = "El vehículo con la placa: {0} ya se encuentra registrado";
   public static final String SUCCESS_REGISTRATION_MSG = "El vehículo se ha registrado correctamente";
   public static final String PLATE_ID_REQUIRED = "La placa del vehículo es requerida";

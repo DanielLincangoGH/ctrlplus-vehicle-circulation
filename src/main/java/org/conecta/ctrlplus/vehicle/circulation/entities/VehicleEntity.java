@@ -24,7 +24,7 @@ public class VehicleEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "id", nullable = false)
+  @Column(name = "id_vehicle", nullable = false)
   private Long id;
 
   @Column(name = "plate_id", nullable = false, unique = true)
