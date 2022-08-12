@@ -1,11 +1,11 @@
 package org.conecta.ctrlplus.vehicle.circulation.dto;
 
-import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.BRAND_REQUIRED;
-import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.CHASSIS_REQUIRED;
-import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.ENGINE_REQUIRED;
-import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.MODEL_REQUIRED;
-import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.PLATE_ID_REQUIRED;
-import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.YEAR_REQUIRED;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.BRAND_REQUIRED;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.CHASSIS_REQUIRED;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.ENGINE_REQUIRED;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.MODEL_REQUIRED;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.PLATE_ID_REQUIRED;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.YEAR_REQUIRED;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

@@ -1,15 +1,13 @@
 package org.conecta.ctrlplus.vehicle.circulation.entities;
 
 import java.time.LocalDateTime;
-import java.util.Set;
-import javax.persistence.CascadeType;
+import java.time.LocalTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,25 +21,18 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "restriction_schedule")
-public class RestrictionScheduleEntity {
+@Table(name = "schedule_hours")
+public class ScheduleHoursEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "id_restriction_schedule", nullable = false)
+  @Column(name = "id_scheduleHours", nullable = false)
   private Long id;
 
-  @Column(name = "digit", nullable = false, length = 1)
-  private String digit;
-
-  @Column(name = "restriction_day", nullable = false)
-  private Integer restrictionDay;
-
   @Column(name = "start_hour", nullable = false)
-  private Double startHour;
+  private LocalTime startHour;
 
   @Column(name = "end_hour", nullable = false)
-  private Double endHour;
+  private LocalTime endHour;
 
   @Column(name = "create_time", nullable = false)
   private LocalDateTime createTime;
@@ -49,7 +40,8 @@ public class RestrictionScheduleEntity {
   @Column(name = "update_time")
   private LocalDateTime updateTime;
 
-  @OneToMany(mappedBy = "restrictionSchedule", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-  private Set<ScheduleHoursEntity> scheduleHours;
+  @JoinColumn(name = "id_restriction_schedule")
+  @ManyToOne(fetch = FetchType.LAZY)
+  private RestrictionScheduleEntity restrictionSchedule;
 
 }
