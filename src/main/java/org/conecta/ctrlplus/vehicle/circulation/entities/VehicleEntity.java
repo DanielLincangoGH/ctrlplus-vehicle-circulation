@@ -45,10 +45,10 @@ public class VehicleEntity {
   @Column(name = "engine", nullable = false)
   private String engine;
 
-  @Column(name = "create_time", nullable = false, columnDefinition = "timestamp default CURRENT_TIMESTAMP")
-  private LocalDateTime create_time;
+  @Column(name = "create_time", nullable = false)
+  private LocalDateTime createTime;
 
-  @Column(name = "update_time", nullable = false)
-  private LocalDateTime update_time;
+  @Column(name = "update_time")
+  private LocalDateTime updateTime;
 
 }

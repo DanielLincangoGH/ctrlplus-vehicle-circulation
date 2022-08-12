@@ -4,6 +4,8 @@ import static java.text.MessageFormat.format;
 import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.ALREADY_REGISTERED_MSG_FORMAT;
 import static org.conecta.ctrlplus.vehicle.circulation.utils.VehicleMessages.SUCCESS_REGISTRATION_MSG;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import org.conecta.ctrlplus.vehicle.circulation.dto.Message;
 import org.conecta.ctrlplus.vehicle.circulation.dto.Vehicle;
 import org.conecta.ctrlplus.vehicle.circulation.dto.VehicleCreate;
@@ -37,6 +39,7 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     final var newVehicle = vehicleMapper.toEntity(vehicle);
+    newVehicle.setCreateTime(LocalDateTime.now(ZoneId.of("America/Guayaquil")));
     vehicleRepository.save(newVehicle);
     vehicle.setId(newVehicle.getId());
 

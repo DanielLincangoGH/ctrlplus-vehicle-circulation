@@ -29,7 +29,7 @@ public class RestrictionScheduleEntity {
   @Column(name = "end_hour", nullable = false)
   private Integer endHour;
 
-  @Column(name = "create_time", nullable = false, columnDefinition = "timestamp default CURRENT_TIMESTAMP")
-  private LocalDateTime create_time;
+  @Column(name = "create_time", nullable = false)
+  private LocalDateTime createTime;
 
 }
