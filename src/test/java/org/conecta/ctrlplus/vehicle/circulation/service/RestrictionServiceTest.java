@@ -66,7 +66,7 @@ class RestrictionServiceTest {
     when(vehicleService.findByPlateId(anyString())).thenReturn(dummyVehicle);
 
     final var circulation = restrictionService
-        .validateCirculationRestriction("anyPlateId", dummyTime);
+        .evaluateCirculationRestriction("anyPlateId", dummyTime);
 
     assertEquals("anyPlateId", circulation.getVehicle().getPlateId());
     assertFalse(circulation.getRestriction().isHasRestriction());
@@ -87,7 +87,7 @@ class RestrictionServiceTest {
     when(vehicleService.findByPlateId(anyString())).thenReturn(dummyVehicle);
 
     final var circulation = restrictionService
-        .validateCirculationRestriction("anyPlateId", dummyTime);
+        .evaluateCirculationRestriction("anyPlateId", dummyTime);
 
     assertEquals("anyPlateId", circulation.getVehicle().getPlateId());
     assertFalse(circulation.getRestriction().isHasRestriction());
@@ -108,7 +108,7 @@ class RestrictionServiceTest {
     when(vehicleService.findByPlateId(anyString())).thenReturn(dummyVehicle);
 
     final var circulation = restrictionService
-        .validateCirculationRestriction("anyPlateId", dummyTime);
+        .evaluateCirculationRestriction("anyPlateId", dummyTime);
 
     assertEquals("anyPlateId", circulation.getVehicle().getPlateId());
     assertTrue(circulation.getRestriction().isHasRestriction());

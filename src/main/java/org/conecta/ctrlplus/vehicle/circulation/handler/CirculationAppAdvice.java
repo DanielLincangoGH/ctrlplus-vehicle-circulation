@@ -4,6 +4,7 @@ import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.AppMessage
 
 import lombok.extern.slf4j.Slf4j;
 import org.conecta.ctrlplus.vehicle.circulation.dto.Message;
+import org.conecta.ctrlplus.vehicle.circulation.utils.exception.VehicleException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -27,6 +28,13 @@ public class CirculationAppAdvice {
     log.warn("Validation exception: {}", e.getMessage(), e);
     String message = e.getBindingResult().getAllErrors().get(0).getDefaultMessage();
     return Message.builder().message(message).build();
+  }
+
+  @ExceptionHandler(VehicleException.class)
+  @ResponseStatus(HttpStatus.CONFLICT)
+  public Message handleException(VehicleException e) {
+    log.warn("Vehicle exception: {}", e.getMessage(), e);
+    return Message.builder().message(e.getMessage()).build();
   }
 
 }

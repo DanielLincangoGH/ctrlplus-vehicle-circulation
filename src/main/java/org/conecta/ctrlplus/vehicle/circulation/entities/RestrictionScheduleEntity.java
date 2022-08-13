@@ -37,11 +37,8 @@ public class RestrictionScheduleEntity {
   @Column(name = "restriction_day", nullable = false)
   private Integer restrictionDay;
 
-  @Column(name = "start_hour", nullable = false)
-  private Double startHour;
-
-  @Column(name = "end_hour", nullable = false)
-  private Double endHour;
+  @Column(name = "status", nullable = false)
+  private int status;
 
   @Column(name = "create_time", nullable = false)
   private LocalDateTime createTime;

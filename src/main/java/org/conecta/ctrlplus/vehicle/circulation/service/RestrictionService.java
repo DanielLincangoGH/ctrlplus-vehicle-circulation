@@ -5,5 +5,5 @@ import org.conecta.ctrlplus.vehicle.circulation.dto.Circulation;
 
 public interface RestrictionService {
 
-  Circulation validateCirculationRestriction(String plateId, LocalDateTime dateTime);
+  Circulation evaluateCirculationRestriction(String plateId, LocalDateTime dateTime);
 }

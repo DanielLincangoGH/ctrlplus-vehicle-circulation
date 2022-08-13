@@ -23,7 +23,7 @@ public class RestrictionServiceImpl implements RestrictionService {
   private VehicleService vehicleService;
 
   @Override
-  public Circulation validateCirculationRestriction(String plateId, LocalDateTime dateTime) {
+  public Circulation evaluateCirculationRestriction(String plateId, LocalDateTime dateTime) {
 
     final var scheduleHours = scheduleHoursRepository
         .findScheduledHours(resolveLastDigit(plateId), dateTime.getDayOfWeek().getValue());

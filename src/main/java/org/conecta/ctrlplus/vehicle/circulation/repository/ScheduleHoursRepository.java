@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface ScheduleHoursRepository extends JpaRepository<ScheduleHoursEntity, Long> {
 
   @Query("select hours from ScheduleHoursEntity hours "
-      + "inner join RestrictionScheduleEntity schedule "
+      + "join hours.restrictionSchedule schedule "
       + "where schedule.digit = :digit and schedule.restrictionDay =:day")
   List<ScheduleHoursEntity> findScheduledHours(String digit, Integer day);
 

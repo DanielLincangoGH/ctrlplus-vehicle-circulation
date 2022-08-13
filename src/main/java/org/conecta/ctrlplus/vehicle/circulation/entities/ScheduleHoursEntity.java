@@ -25,7 +25,7 @@ import lombok.Setter;
 public class ScheduleHoursEntity {
 
   @Id
-  @Column(name = "id_scheduleHours", nullable = false)
+  @Column(name = "id_schedule_hours", nullable = false)
   private Long id;
 
   @Column(name = "start_hour", nullable = false)
@@ -33,6 +33,9 @@ public class ScheduleHoursEntity {
 
   @Column(name = "end_hour", nullable = false)
   private LocalTime endHour;
+
+  @Column(name = "status", nullable = false)
+  private int status;
 
   @Column(name = "create_time", nullable = false)
   private LocalDateTime createTime;
