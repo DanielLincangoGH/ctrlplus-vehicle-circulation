@@ -1,5 +1,6 @@
 package org.conecta.ctrlplus.vehicle.circulation.dto;
 
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.CirculationMessages.ALLOW_CIRCULATION_MSG;
 import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.CirculationMessages.RESTRICTION_MSG;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -23,7 +24,7 @@ public class Restriction {
   private String message;
 
   public String getMessage() {
-    return this.hasRestriction ? RESTRICTION_MSG : this.message;
+    return this.hasRestriction ? RESTRICTION_MSG : ALLOW_CIRCULATION_MSG;
   }
 
 

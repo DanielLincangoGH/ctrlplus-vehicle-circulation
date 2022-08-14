@@ -70,7 +70,8 @@ class RestrictionServiceTest {
 
     assertEquals("anyPlateId", circulation.getVehicle().getPlateId());
     assertFalse(circulation.getRestriction().isHasRestriction());
-    assertNull(circulation.getRestriction().getMessage());
+    assertEquals(CirculationMessages.ALLOW_CIRCULATION_MSG,
+        circulation.getRestriction().getMessage());
 
   }
 
@@ -91,7 +92,8 @@ class RestrictionServiceTest {
 
     assertEquals("anyPlateId", circulation.getVehicle().getPlateId());
     assertFalse(circulation.getRestriction().isHasRestriction());
-    assertNull(circulation.getRestriction().getMessage());
+    assertEquals(CirculationMessages.ALLOW_CIRCULATION_MSG,
+        circulation.getRestriction().getMessage());
 
   }
 
