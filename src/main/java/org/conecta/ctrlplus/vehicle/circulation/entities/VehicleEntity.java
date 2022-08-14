@@ -30,6 +30,9 @@ public class VehicleEntity {
   @Column(name = "plate_id", nullable = false, unique = true)
   private String plateId;
 
+  @Column(name = "color", nullable = false)
+  private String color;
+
   @Column(name = "brand", nullable = false)
   private String brand;
 

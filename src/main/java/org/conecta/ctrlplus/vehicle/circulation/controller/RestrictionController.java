@@ -3,6 +3,7 @@ package org.conecta.ctrlplus.vehicle.circulation.controller;
 import static java.time.LocalDateTime.parse;
 
 import java.time.format.DateTimeFormatter;
+import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.conecta.ctrlplus.vehicle.circulation.dto.Circulation;
 import org.conecta.ctrlplus.vehicle.circulation.dto.EvaluateRestriction;
@@ -24,7 +25,7 @@ public class RestrictionController {
 
   @PostMapping("/{plateId}/v1")
   private Circulation evaluateCirculationRestriction(@PathVariable String plateId,
-      @RequestBody EvaluateRestriction evaluateRestriction) {
+      @RequestBody @Valid EvaluateRestriction evaluateRestriction) {
     final var evaluationDate = evaluateRestriction.getEvaluationDate();
     log.info("Evaluation date: {}", evaluationDate);
     final var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");

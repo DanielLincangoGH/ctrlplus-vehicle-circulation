@@ -2,6 +2,7 @@ package org.conecta.ctrlplus.vehicle.circulation.dto;
 
 import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.BRAND_REQUIRED;
 import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.CHASSIS_REQUIRED;
+import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.COLOR_REQUIRED;
 import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.ENGINE_REQUIRED;
 import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.MODEL_REQUIRED;
 import static org.conecta.ctrlplus.vehicle.circulation.utils.messages.VehicleMessages.PLATE_ID_REQUIRED;
@@ -24,6 +25,9 @@ public class Vehicle {
 
   @NotBlank(message = PLATE_ID_REQUIRED)
   private String plateId;
+
+  @NotBlank(message = COLOR_REQUIRED)
+  private String color;
 
   @NotBlank(message = BRAND_REQUIRED)
   private String brand;

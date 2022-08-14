@@ -66,6 +66,7 @@ class CirculationApplicationTest {
             .message(SUCCESS_REGISTRATION_MSG).build()).build());
 
     Vehicle vehicle = Vehicle.builder()
+        .color("anyColor")
         .plateId("anyPlateId")
         .brand("anyBrand")
         .model("anyModel")
