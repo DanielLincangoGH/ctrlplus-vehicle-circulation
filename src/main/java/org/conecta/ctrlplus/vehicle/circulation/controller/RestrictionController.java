@@ -9,6 +9,7 @@ import org.conecta.ctrlplus.vehicle.circulation.dto.Circulation;
 import org.conecta.ctrlplus.vehicle.circulation.dto.EvaluateRestriction;
 import org.conecta.ctrlplus.vehicle.circulation.service.RestrictionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/vehicle/restrictions/api")
 public class RestrictionController {
 
