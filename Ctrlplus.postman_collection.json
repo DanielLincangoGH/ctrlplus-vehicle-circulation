@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "6fc3e347-4938-480b-9d4f-58c19fe15849",
+		"name": "Ctrl plus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22811489"
+	},
+	"item": [
+		{
+			"name": "Vehicle registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"plateId\": \"PCT-2258\",\n    \"color\":\"Rojo\",\n    \"model\": \"Accent\",\n    \"brand\": \"Hyundai\",\n    \"engine\": \"123abc\",\n    \"chassis\": \"chassis\",\n    \"manufacturingYear\": 2000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle/api/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle",
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evaluate circulation restriction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"evaluationDate\":\"2022-08-18 18:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle/restrictions/api/PCT-2258/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle",
+						"restrictions",
+						"api",
+						"PCT-2258",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -17,3 +17,7 @@ See the app running in: [Circulation web app - Development](http://localhost:808
 Run `gradle build` for dependency installation.
 Run `./gradlew bootRun` for init development server.
 
+
+## POSTMAN Collection
+
+[REST Services](/Ctrlplus.postman_collection.json)
